@@ -22,5 +22,5 @@ public interface BookDao extends JpaRepository<Book,Long> {
     Book findBook(@Param("title") String bookTitle);
 
     @Query("select book from Book book where book.author = :author")
-    Page findBookPage(Pageable pageable, @Param("author") String author);
+    Page<Book> findBookPage(Pageable pageable, @Param("author") String author);
 }
