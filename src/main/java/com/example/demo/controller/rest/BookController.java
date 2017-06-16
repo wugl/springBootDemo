@@ -29,7 +29,7 @@ public class BookController {
 
     }
     @RequestMapping("/title/{title}")
-    public ReturnWithData<List<Book>> findBookByTitle(@PathVariable String title){
+    public ReturnWithData<Book> findBookByTitle(@PathVariable String title){
 
         Book data = bookDao.findByTitle(title);
 
@@ -37,7 +37,7 @@ public class BookController {
 
     }
     @RequestMapping("/id/{id}")
-    public ReturnWithData<List<Book>> findBookById(@PathVariable Long id){
+    public ReturnWithData<Book> findBookById(@PathVariable Long id){
 
         Book data = bookDao.findByBookId(id);
 
