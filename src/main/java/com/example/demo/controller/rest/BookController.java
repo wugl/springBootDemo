@@ -33,7 +33,7 @@ public class BookController {
 
         Book data = bookDao.findByTitle(title);
 
-        return new ReturnWithData("find Book By Title","OK",data);
+        return new ReturnWithData<>("find Book By Title","OK",data);
 
     }
     @RequestMapping("/id/{id}")
@@ -41,7 +41,7 @@ public class BookController {
 
         Book data = bookDao.findByBookId(id);
 
-        return new ReturnWithData("find Book By Id","OK",data);
+        return new ReturnWithData<>("find Book By Id","OK",data);
 
     }
 }
